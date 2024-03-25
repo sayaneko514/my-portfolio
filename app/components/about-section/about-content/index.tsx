@@ -169,7 +169,7 @@ const AboutContent = () => {
                                     lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
-                                }}>Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CDCI, SDLC, Team Player, Result-driven
+                                }}>Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CI/CD, SDLC, Team Player, Result-driven
                             </p>
                         </li>
                     </ul>
