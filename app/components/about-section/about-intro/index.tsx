@@ -42,7 +42,7 @@ const AboutIntro = () => {
 
     return (
         <>
-            <h2 data-aos="fade-up" className="text-highlight uppercase font-bold text-sm tracking-widest text-center" id="about-section-title"
+            <h2 data-aos="fade-up" className="text-highlight uppercase font-bold text-base tracking-widest text-center" id="about-section-title"
                 style={{
                     fontFamily: '"Poppins", sans-serif',
                     lineHeight: 0.565,
@@ -51,7 +51,7 @@ const AboutIntro = () => {
                 }}>
                 About
             </h2>
-            <h5 ref={h5Ref} className="text-2xl text-center pt-2 font-bold tracking-widest" id="about-intro-title"
+            <h5 ref={h5Ref} className="text-3xl text-center pt-2 font-bold tracking-widest" id="about-intro-title"
                 style={{
                     fontFamily: '"Poppins", sans-serif',
                     lineHeight: '2rem',
@@ -67,7 +67,7 @@ const AboutIntro = () => {
                 )}
             </h5>
             <div data-aos="fade-up" data-aos-delay="3000" className="container mb-[3rem]">
-                <p className="text-left text-gray-500 pt-6 px-[15rem]" id="about-intro-content"
+                <p className="text-left text-lg text-gray-500 pt-6 px-[15rem]" id="about-intro-content"
                     style={{
                         fontFamily: '"Lora", serif',
                         lineHeight: '1.9rem',

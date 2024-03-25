@@ -9,7 +9,7 @@ const AboutContent = () => {
         <>
             <div className="flex flex-wrap md:flex-nowrap px-[14rem]">
                 <div className="w-full md:w-1/2 p-4" data-aos="fade-right" data-aos-delay="2800">
-                    <h3 className="text-lg uppercase font-bold text-sm tracking-widest"
+                    <h3 className="text-xl uppercase font-bold text-sm tracking-widest"
                         style={{
                             fontFamily: '"Poppins", sans-serif',
                             lineHeight: '3rem',
@@ -22,7 +22,7 @@ const AboutContent = () => {
                     </div>
                     <ul className="list-none">
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -30,7 +30,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>FullName:
                             </p>
-                            <p className="text-xs text-gray-500 tracking-widest"
+                            <p className="text-base text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
@@ -40,7 +40,7 @@ const AboutContent = () => {
                             </p>
                         </li>
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -48,7 +48,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Location:
                             </p>
-                            <p className="text-gray-500 text-xs tracking-widest"
+                            <p className="text-gray-500 text-base tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
@@ -58,7 +58,7 @@ const AboutContent = () => {
                             </p>
                         </li>
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -66,7 +66,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Email:
                             </p>
-                            <p className="text-gray-500 text-xs tracking-widest"
+                            <p className="text-gray-500 text-base tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
@@ -76,7 +76,7 @@ const AboutContent = () => {
                             </p>
                         </li>
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -91,7 +91,7 @@ const AboutContent = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 p-4" data-aos="fade-left" data-aos-delay="2800">
-                    <h3 className="text-lg uppercase font-bold text-sm tracking-widest"
+                    <h3 className="text-xl uppercase font-bold text-sm tracking-widest"
                         style={{
                             fontFamily: '"Poppins", sans-serif',
                             lineHeight: '3rem',
@@ -101,7 +101,7 @@ const AboutContent = () => {
                     </h3>
                     <ul className="list-none">
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -109,7 +109,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Languages:
                             </p>
-                            <p className="text-xs text-gray-500 tracking-widest"
+                            <p className="text-base text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
@@ -119,7 +119,7 @@ const AboutContent = () => {
                             </p>
                         </li>
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -127,7 +127,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Platforms/Environment:
                             </p>
-                            <p className="text-gray-500 text-xs tracking-widest"
+                            <p className="text-gray-500 text-base tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
@@ -137,7 +137,7 @@ const AboutContent = () => {
                             </p>
                         </li>
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -145,7 +145,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Frameworks:
                             </p>
-                            <p className="text-gray-500 text-xs tracking-widest"
+                            <p className="text-gray-500 text-base tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
@@ -155,7 +155,7 @@ const AboutContent = () => {
                             </p>
                         </li>
                         <li>
-                            <p className="text-xs uppercase font-bold tracking-widest mt-5"
+                            <p className="text-base uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -163,7 +163,7 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Core Competencies:
                             </p>
-                            <p className="text-gray-500 text-xs tracking-widest"
+                            <p className="text-gray-500 text-base tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: 1.6,
