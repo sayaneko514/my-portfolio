@@ -12,7 +12,7 @@ const ProfilePicture: React.FC<ProfilePictureProps> = ({
 }) => {
     return (
         <>
-            <Image className="w-24 h-24 rounded-full" src="/images/profile.jpg" alt="Profile picture" width="384" height="512" />
+            <Image className="w-24 h-24 rounded-full transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200" src="/images/profile.jpg" alt="Profile picture" width="384" height="512" />
         </>
     );
 };

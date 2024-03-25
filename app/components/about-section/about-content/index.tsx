@@ -17,12 +17,12 @@ const AboutContent = () => {
                             textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                         }}>Profile
                     </h3>
-                    <div className="flex items-start">
+                    <div className="flex items-start mt-7">
                         <ProfilePicture image={profilePicture} alt="Profile Picture" />
                     </div>
                     <ul className="list-none">
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -30,17 +30,17 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>FullName:
                             </p>
-                            <p className="text-base text-gray-500 tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Rui Tang
                             </p>
                         </li>
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -48,17 +48,17 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Location:
                             </p>
-                            <p className="text-gray-500 text-base tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Vancouver, Canada
                             </p>
                         </li>
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -66,17 +66,17 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Email:
                             </p>
-                            <p className="text-gray-500 text-base tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Sayaneko514@hotmail.com
                             </p>
                         </li>
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -101,7 +101,7 @@ const AboutContent = () => {
                     </h3>
                     <ul className="list-none">
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -109,17 +109,17 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Languages:
                             </p>
-                            <p className="text-base text-gray-500 tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Java/C#/Kotlin, JavaScript/TypeScript, Python, HTML/CSS, C++, SQL, YAML
                             </p>
                         </li>
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -127,17 +127,17 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Platforms/Environment:
                             </p>
-                            <p className="text-gray-500 text-base tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Azure DevOps, Confluence, Git, Jira, Node.js, TestRail, AWS, Docker, Jenkins
                             </p>
                         </li>
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -145,17 +145,17 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Frameworks:
                             </p>
-                            <p className="text-gray-500 text-base tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>NextJs, ReactJS, AngularJs, ExpressJS, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright
                             </p>
                         </li>
                         <li>
-                            <p className="text-base uppercase font-bold tracking-widest mt-5"
+                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
                                     lineHeight: '2.6rem',
@@ -163,10 +163,10 @@ const AboutContent = () => {
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Core Competencies:
                             </p>
-                            <p className="text-gray-500 text-base tracking-widest"
+                            <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
                                     fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 1.6,
+                                    lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
                                 }}>Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CDCI, SDLC, Team Player, Result-driven
