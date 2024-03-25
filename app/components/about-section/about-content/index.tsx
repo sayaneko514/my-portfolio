@@ -151,7 +151,7 @@ const AboutContent = () => {
                                     lineHeight: 2,
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
-                                }}>NextJs, ReactJS, AngularJs, ExpressJS, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright
+                                }}>Next.js, React.jS, Angular.js, Express.jS, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright
                             </p>
                         </li>
                         <li>
