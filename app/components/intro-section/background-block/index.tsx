@@ -19,6 +19,7 @@ const IntroBackground: React.FC<IntroBackgroundProps> = ({
                 objectFit="cover"
                 objectPosition="center bottom"
                 quality={100}
+                priority={true}
             />
         </div>
     );
