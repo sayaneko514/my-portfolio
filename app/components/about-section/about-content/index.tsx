@@ -125,7 +125,7 @@ const AboutContent = () => {
                                     lineHeight: '2.6rem',
                                     letterSpacing: '.2rem',
                                     textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
-                                }}>Platforms/Environment:
+                                }}>Technologies/Tools:
                             </p>
                             <p className="text-sm text-gray-500 tracking-widest"
                                 style={{
