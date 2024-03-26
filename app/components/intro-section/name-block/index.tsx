@@ -9,10 +9,10 @@ interface NameProps {
 const Name: React.FC<NameProps> = ({ startSecondTyped, onCompleteSecondTyped }) => {
     return (
         <h1 className={startSecondTyped ? "text-white uppercase tracking-widest font-bold pt-3 text-6xl mb-2" : "hidden"}
+            id="intro-name"
             style={{
                 fontFamily: '"Lora", serif',
-                lineHeight: '2.4rem',
-                textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
+                lineHeight: '2.4rem'
             }}>
             {startSecondTyped && (
                 <ReactTyped

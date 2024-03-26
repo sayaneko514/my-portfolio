@@ -11,7 +11,7 @@ const IntroBackground: React.FC<IntroBackgroundProps> = ({
     alt
 }) => {
     return (
-        <div className="absolute top-0 left-0 w-full h-full" id="background">
+        <div className="absolute top-0 left-0 w-full h-full" id="intro-background">
             <Image
                 src={image}
                 alt={alt}

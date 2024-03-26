@@ -5,9 +5,24 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ReactTyped } from "react-typed";
 
-const AboutIntro = () => {
+interface IntroTextProps {
+    introTitle: string;
+    introSubTitle: string;
+    introText: string;
+    introSubTitleColor: string;
+}
+
+
+const SectionIntro: React.FC<IntroTextProps> = ({
+    introTitle,
+    introSubTitle,
+    introSubTitleColor,
+    introText,
+}) => {
+
     const [typing, setTyping] = useState(false);
     const h5Ref = useRef(null);
+    const dynamicClassName = introSubTitleColor;
 
     useEffect(() => {
         AOS.init({
@@ -46,20 +61,19 @@ const AboutIntro = () => {
                 style={{
                     fontFamily: '"Poppins", sans-serif',
                     lineHeight: 0.565,
-                    letterSpacing: '.2rem',
-                    textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
+                    letterSpacing: '.2rem'
                 }}>
-                About
+                {introTitle}
             </h2>
             <h5 ref={h5Ref} className="text-3xl text-center pt-2 font-bold tracking-widest" id="about-intro-title"
                 style={{
                     fontFamily: '"Poppins", sans-serif',
                     lineHeight: '2rem',
-                    textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
+                    color: introSubTitleColor,
                 }}>
                 {typing && (
                     <ReactTyped
-                        strings={['Little Something about myself...']}
+                        strings={[introSubTitle]}
                         typeSpeed={40}
                         startDelay={1200}
                         showCursor={true}
@@ -70,14 +84,13 @@ const AboutIntro = () => {
                 <p className="text-left text-lg text-gray-500 pt-6 px-[15rem]" id="about-intro-content"
                     style={{
                         fontFamily: '"Lora", serif',
-                        lineHeight: '1.9rem',
-                        textShadow: '0 0 6px rgba(0, 0, 0, 0.2)'
+                        lineHeight: '1.9rem'
                     }}>
-                    My name is Rui Tang, but you could call me Terry, I&apos;m a tech enthusiast with a B.Tech in Information Technology. My adventure in the tech landscape is filled with stories of tackling challenges head-on, from streamlining software processes at renowned firms to diving into projects that spark innovation. I thrive on finding new tasks that push my limits, much like assembling this portfolio webpage. It&apos;s not just about coding for me; it&apos;s about connecting, learning, and growing. Each project, whether it&apos;s enhancing software pipelines or developing a smart garbage management system, is a step towards understanding the harmony between technology and practicality. I&apos;m on a continuous journey of exploration and improvement, always seeking out the next challenge with a warm smile and an eager mind, ready to turn the complex into the beautifully simple.
+                    {introText}
                 </p>
             </div>
         </>
     );
 };
 
-export default AboutIntro;
+export default SectionIntro;

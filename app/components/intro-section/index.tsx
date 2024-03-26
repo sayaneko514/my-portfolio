@@ -35,7 +35,7 @@ const Intro = ({ children }: IntroProps) => {
     const backgroundImage = '/images/intro_bg.jpg';
 
     return (
-        <section className="relative min-h-screen flex flex-col justify-center items-center" id="intro">
+        <section className="relative min-h-screen flex flex-col justify-center items-center" id="intro-section">
             <div className="absolute top-0 left-0 w-full h-full">
                 <IntroBackground image={backgroundImage} alt="Intro Background" />
             </div>
