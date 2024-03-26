@@ -8,7 +8,7 @@ const DetailTitle: React.FC<DetailTitleProps> = ({ title }) => {
 
     return (
         <h3
-            className="text-xl uppercase font-bold tracking-widest"
+            className="sm:text-lg md:text-xl uppercase font-bold tracking-widest text-center"
             id={titleId}
             style={{
                 fontFamily: '"Poppins", sans-serif',

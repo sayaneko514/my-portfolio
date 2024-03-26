@@ -8,7 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        highlight: '#cc005f',
+        highlight: "#75c3e6",
+        highlightDark: '#cc005f',
+        primaryText: '#888888',
+        secondaryText: '#7d7d7d',
+        tertiaryText: '#6e6e6e',
       },
       variants: {
         textShadow: ['hover', 'focus'],

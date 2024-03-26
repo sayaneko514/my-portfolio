@@ -8,7 +8,7 @@ interface NameProps {
 
 const Name: React.FC<NameProps> = ({ startSecondTyped, onCompleteSecondTyped }) => {
     return (
-        <h1 className={startSecondTyped ? "text-white uppercase tracking-widest font-bold pt-3 text-6xl mb-2" : "hidden"}
+        <h1 className={startSecondTyped ? "text-white uppercase text-center tracking-widest font-bold pt-3 text-3xl sm:text-5xl md:text-6xl mb-2" : "hidden"}
             id="intro-name"
             style={{
                 fontFamily: '"Lora", serif',
