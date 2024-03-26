@@ -6,23 +6,25 @@ import 'aos/dist/aos.css';
 import { ReactTyped } from "react-typed";
 
 interface IntroTextProps {
+    sectionTitle: string;
     introTitle: string;
-    introSubTitle: string;
-    introText: string;
-    introSubTitleColor: string;
+    introContent: string;
+    introTitleColor: string;
 }
 
 
 const SectionIntro: React.FC<IntroTextProps> = ({
+    sectionTitle,
     introTitle,
-    introSubTitle,
-    introSubTitleColor,
-    introText,
+    introTitleColor,
+    introContent,
 }) => {
 
     const [typing, setTyping] = useState(false);
     const h5Ref = useRef(null);
-    const dynamicClassName = introSubTitleColor;
+    const sectionTitleId = sectionTitle + "-section-title";
+    const introTitleId = sectionTitle + "-intro-title";
+    const introContentId = sectionTitle + "-intro-content";
 
     useEffect(() => {
         AOS.init({
@@ -57,23 +59,23 @@ const SectionIntro: React.FC<IntroTextProps> = ({
 
     return (
         <>
-            <h2 data-aos="fade-up" className="text-highlight uppercase font-bold text-base tracking-widest text-center" id="about-section-title"
+            <h2 data-aos="fade-up" className="text-highlight uppercase font-bold text-base tracking-widest text-center" id={sectionTitleId}
                 style={{
                     fontFamily: '"Poppins", sans-serif',
-                    lineHeight: 0.565,
+                    lineHeight: 1,
                     letterSpacing: '.2rem'
                 }}>
-                {introTitle}
+                {sectionTitle}
             </h2>
-            <h5 ref={h5Ref} className="text-3xl text-center pt-2 font-bold tracking-widest" id="about-intro-title"
+            <h5 ref={h5Ref} className="text-3xl text-center pt-2 font-bold tracking-widest" id={introTitleId}
                 style={{
                     fontFamily: '"Poppins", sans-serif',
                     lineHeight: '2rem',
-                    color: introSubTitleColor,
+                    color: introTitleColor,
                 }}>
                 {typing && (
                     <ReactTyped
-                        strings={[introSubTitle]}
+                        strings={[introTitle]}
                         typeSpeed={40}
                         startDelay={1200}
                         showCursor={true}
@@ -81,12 +83,12 @@ const SectionIntro: React.FC<IntroTextProps> = ({
                 )}
             </h5>
             <div data-aos="fade-up" data-aos-delay="3000" className="container mb-[3rem]">
-                <p className="text-left text-lg text-gray-500 pt-6 px-[15rem]" id="about-intro-content"
+                <p className="text-left text-lg text-gray-500 pt-6 px-[15rem]" id={introContentId}
                     style={{
                         fontFamily: '"Lora", serif',
                         lineHeight: '1.9rem'
                     }}>
-                    {introText}
+                    {introContent}
                 </p>
             </div>
         </>

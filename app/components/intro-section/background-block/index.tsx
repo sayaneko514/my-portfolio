@@ -1,20 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import { INTRO_BACKGROUND_IMAGE_PATH } from '@/app/constants/path';
 
-interface IntroBackgroundProps {
-    image: string;
-    alt: string;
-}
-
-const IntroBackground: React.FC<IntroBackgroundProps> = ({
-    image,
-    alt
-}) => {
+const IntroBackground = () => {
     return (
         <div className="absolute top-0 left-0 w-full h-full" id="intro-background">
             <Image
-                src={image}
-                alt={alt}
+                src={INTRO_BACKGROUND_IMAGE_PATH}
+                alt="Intro Background"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center bottom"

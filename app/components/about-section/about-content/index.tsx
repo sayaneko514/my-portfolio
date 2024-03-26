@@ -1,159 +1,52 @@
 import ResumeDownload from "../resume-button";
 import ProfilePicture from "../profile-picture";
+import DetailTitle from "./detail-title-module";
+import DetailSubTitle from "./detail-module";
 
 const AboutContent = () => {
 
-    const profilePicture = 'images/profile.jpg';
+    const profilePicture = '/images/profile.jpg';
 
     return (
         <>
             <div className="flex flex-wrap md:flex-nowrap px-[14rem]">
-                <div className="w-full md:w-1/2 p-4" data-aos="fade-right" data-aos-delay="2800">
-                    <h3 className="text-xl uppercase font-bold text-sm tracking-widest"
-                        style={{
-                            fontFamily: '"Poppins", sans-serif',
-                            lineHeight: '3rem',
-                            letterSpacing: '.2rem'
-                        }}>Profile
-                    </h3>
-                    <div className="flex items-start mt-7">
-                        <ProfilePicture image={profilePicture} alt="Profile Picture" />
+                <div className="w-full md:w-1/2 p-4" data-aos="fade-right" data-aos-delay="2800" id="about-left-detail-container">
+                    <DetailTitle title="profile" />
+                    <div className="flex items-start mt-7" id="about-profile-picture-container">
+                        <ProfilePicture />
                     </div>
-                    <ul className="list-none">
+                    <ul className="list-none" id="about-left-list">
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>FullName:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Rui Tang
-                            </p>
+                            <DetailSubTitle title="full name" hasTextContent={true} textContent="Rui Tang" />
                         </li>
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Location:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Vancouver, Canada
-                            </p>
+                            <DetailSubTitle title="location" hasTextContent={true} textContent="Vancouver, Canada" />
                         </li>
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Email:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Sayaneko514@hotmail.com
-                            </p>
+                            <DetailSubTitle title="email" hasTextContent={true} textContent="Sayaneko514@hotmail.com" />
                         </li>
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Resume/CV:
-                            </p>
+                            <DetailSubTitle title="resume/cv" hasTextContent={false} />
                             <ResumeDownload />
                         </li>
 
                     </ul>
                 </div>
 
-                <div className="w-full md:w-1/2 p-4" data-aos="fade-left" data-aos-delay="2800">
-                    <h3 className="text-xl uppercase font-bold text-sm tracking-widest"
-                        style={{
-                            fontFamily: '"Poppins", sans-serif',
-                            lineHeight: '3rem',
-                            letterSpacing: '.2rem'
-                        }}>Skills
-                    </h3>
-                    <ul className="list-none">
+                <div className="w-full md:w-1/2 p-4" data-aos="fade-left" data-aos-delay="2800" id="about-right-detail-container">
+                    <DetailTitle title="skills" />
+                    <ul className="list-none" id="about-right-list">
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Languages:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Java/C#/Kotlin, JavaScript/TypeScript, Python, HTML/CSS, C++, SQL, YAML
-                            </p>
+                            <DetailSubTitle title="languages" hasTextContent={true} textContent="Java/C#/Kotlin, JavaScript/TypeScript, Python, HTML/CSS, C++, SQL, YAML" />
                         </li>
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Technologies/Tools:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Azure DevOps, Confluence, Git, Jira, Node.js, TestRail, AWS, Docker, Jenkins
-                            </p>
+                            <DetailSubTitle title="technologies/tools" hasTextContent={true} textContent="Azure DevOps, Confluence, Git, Jira, Node.js, TestRail, AWS, Docker, Jenkins" />
                         </li>
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Frameworks:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Next.js, React.jS, Angular.js, Express.jS, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright
-                            </p>
+                            <DetailSubTitle title="frameworks" hasTextContent={true} textContent="Next.js, React.jS, Angular.js, Express.jS, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright" />
                         </li>
                         <li>
-                            <p className="text-sm uppercase font-bold tracking-widest mt-5"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: '2.6rem',
-                                    letterSpacing: '.2rem'
-                                }}>Core Competencies:
-                            </p>
-                            <p className="text-sm text-gray-500 tracking-widest"
-                                style={{
-                                    fontFamily: '"Poppins", sans-serif',
-                                    lineHeight: 2,
-                                    letterSpacing: '.2rem'
-                                }}>Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CI/CD, SDLC, Team Player, Result-driven
-                            </p>
+                            <DetailSubTitle title="core competencies" hasTextContent={true} textContent="Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CI/CD, SDLC, Team Player, Result-driven" />
                         </li>
                     </ul>
                 </div>
