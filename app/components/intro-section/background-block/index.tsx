@@ -8,9 +8,11 @@ const IntroBackground = () => {
             <Image
                 src={INTRO_BACKGROUND_IMAGE_PATH}
                 alt="Intro Background"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center bottom"
+                fill
+                style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center bottom',
+                }}
                 quality={100}
                 priority={true}
             />

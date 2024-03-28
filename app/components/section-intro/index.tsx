@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import { ReactTyped } from "react-typed";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 interface IntroTextProps {
     sectionTitle: string;
     introTitle: string;
@@ -25,7 +26,7 @@ const SectionIntro: React.FC<IntroTextProps> = ({
     const sectionTitleId = sectionTitle + "-section-title";
     const introTitleId = sectionTitle + "-intro-title";
     const introContentId = sectionTitle + "-intro-content";
-    const maxHeight = isExpanded ? '1000px' : '300px';
+    const maxHeight = isExpanded ? '1000px' : '290px';
 
     const toggleExpandText = () => setIsExpanded(!isExpanded);
 
@@ -88,16 +89,11 @@ const SectionIntro: React.FC<IntroTextProps> = ({
                     style={{
                         fontFamily: '"Lora", serif',
                         lineHeight: '1.9rem',
+                        maxHeight: maxHeight,
+                        overflow: 'hidden',
+                        transition: 'max-height 0.3s ease-in-out',
                     }}>
-                    <div
-                        style={{
-                            maxHeight: maxHeight,
-                            overflow: 'hidden',
-                            transition: 'max-height 0.3s ease-in-out',
-                        }}
-                    >
-                        {introContent}
-                    </div>
+                    {introContent}
                 </p>
                 {introContent.length > 300 && (
                     <div className="text-center text-highlight mt-2 text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:hidden">
