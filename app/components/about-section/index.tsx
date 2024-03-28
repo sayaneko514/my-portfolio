@@ -4,7 +4,7 @@ import SectionIntro from '../section-intro';
 const About = () => {
     return (
         <section id="about-section">
-            <div className="container mx-auto py-[5rem] lg:py-[6rem]" id="about-section-content-container">
+            <div className="container mx-auto py-[5rem] lg:py-[6rem] overflow-hidden" id="about-section-content-container">
                 <SectionIntro
                     sectionTitle='about'
                     introTitle='A Little Something About Myself...'

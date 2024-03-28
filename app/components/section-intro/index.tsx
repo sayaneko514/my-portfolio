@@ -4,7 +4,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ReactTyped } from "react-typed";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 interface IntroTextProps {
     sectionTitle: string;
     introTitle: string;
@@ -24,12 +25,12 @@ const SectionIntro: React.FC<IntroTextProps> = ({
     const sectionTitleId = sectionTitle + "-section-title";
     const introTitleId = sectionTitle + "-intro-title";
     const introContentId = sectionTitle + "-intro-content";
+    const maxHeight = isExpanded ? '1000px' : '300px';
+
+    const toggleExpandText = () => setIsExpanded(!isExpanded);
 
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     useEffect(() => {
@@ -55,10 +56,6 @@ const SectionIntro: React.FC<IntroTextProps> = ({
             observer.disconnect();
         };
     }, []);
-
-    const handleExpandClick = () => {
-        setIsExpanded(!isExpanded);
-    };
 
     return (
         <>
@@ -91,19 +88,22 @@ const SectionIntro: React.FC<IntroTextProps> = ({
                     style={{
                         fontFamily: '"Lora", serif',
                         lineHeight: '1.9rem',
-                        maxHeight: isExpanded ? 'none' : 'calc(2rem * 9)',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        WebkitBoxOrient: 'vertical',
-                        display: '-webkit-box',
-                        WebkitLineClamp: isExpanded ? 'none' : '9',
                     }}>
-                    {introContent}
+                    <div
+                        style={{
+                            maxHeight: maxHeight,
+                            overflow: 'hidden',
+                            transition: 'max-height 0.3s ease-in-out',
+                        }}
+                    >
+                        {introContent}
+                    </div>
                 </p>
-                {!isExpanded && (
-                    <div className="text-end pr-7">
-                        <button onClick={handleExpandClick} className="text-highlight text-[0.5rem] sm:text-xs lg:hidden hover:text-black">
-                            Read more...
+                {introContent.length > 300 && (
+                    <div className="text-center text-highlight mt-2 text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:hidden">
+                        <button onClick={toggleExpandText}>
+                            {isExpanded ? "Show Less " : "Show More "}
+                            {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
                         </button>
                     </div>
                 )}

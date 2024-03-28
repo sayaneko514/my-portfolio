@@ -35,7 +35,7 @@ const DetailContent: React.FC<DetailProps> = ({
                 }}>{title}:
             </p>
             {hasTextContent && (
-                <p className="text-xs md:text-sm text-secondaryText tracking-widest text-center"
+                <p className="text-xs md:text-sm text-secondaryText text-center"
                     id={contentId}
                     style={{
                         fontFamily: '"Poppins", sans-serif',
