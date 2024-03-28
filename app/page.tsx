@@ -6,11 +6,11 @@ import Experience from './components/exp-section';
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Intro />
       <About />
       <Experience />
-    </>
+    </div>
   );
 };
 

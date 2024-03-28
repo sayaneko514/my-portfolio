@@ -2,6 +2,7 @@ import ResumeDownload from "../resume-button";
 import ProfilePicture from "../profile-picture";
 import DetailTitle from "./detail-title-module";
 import DetailSubTitle from "./detail-module";
+import LanguagesList from "./language-list";
 
 const AboutContent = () => {
 
@@ -37,13 +38,13 @@ const AboutContent = () => {
                     <DetailTitle title="skills" />
                     <ul className="list-none" id="about-right-list">
                         <li>
-                            <DetailSubTitle title="languages" hasTextContent={true} textContent="Java/C#/Kotlin, JavaScript/TypeScript, Python, HTML/CSS, C++, SQL, YAML" />
+                            <LanguagesList />
                         </li>
                         <li>
                             <DetailSubTitle title="technologies/tools" hasTextContent={true} textContent="Azure DevOps, Confluence, Git, Jira, Node.js, TestRail, AWS, Docker, Jenkins" />
                         </li>
                         <li>
-                            <DetailSubTitle title="frameworks" hasTextContent={true} textContent="Next.js, React.jS, Angular.js, Express.jS, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright" />
+                            <DetailSubTitle title="frameworks" hasTextContent={true} textContent="Next.js, React.js, Angular.js, Express.js, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright" />
                         </li>
                         <li>
                             <DetailSubTitle title="core competencies" hasTextContent={true} textContent="Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CI/CD, SDLC, Team Player, Result-driven" />
