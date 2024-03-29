@@ -2,7 +2,7 @@ import ResumeDownload from "../resume-button";
 import ProfilePicture from "../profile-picture";
 import DetailTitle from "./detail-title-module";
 import DetailSubTitle from "./detail-module";
-import LanguagesList from "./language-list";
+import QueryList from "./query-module";
 
 const AboutContent = () => {
 
@@ -37,18 +37,10 @@ const AboutContent = () => {
                 <div className="w-full md:w-1/2 mt-12 md:mt-0 px-2" data-aos="fade-left" data-aos-delay="2800" id="about-right-detail-container">
                     <DetailTitle title="skills" />
                     <ul className="list-none" id="about-right-list">
-                        <li>
-                            <LanguagesList />
-                        </li>
-                        <li>
-                            <DetailSubTitle title="technologies/tools" hasTextContent={true} textContent="Azure DevOps, Confluence, Git, Jira, Node.js, TestRail, AWS, Docker, Jenkins" />
-                        </li>
-                        <li>
-                            <DetailSubTitle title="frameworks" hasTextContent={true} textContent="Next.js, React.js, Angular.js, Express.js, T3, Cypress, Selenium/Appium, Espressom, JUnit, PlayWright" />
-                        </li>
-                        <li>
-                            <DetailSubTitle title="core competencies" hasTextContent={true} textContent="Web Development, Software Development, Software QA, Test Automation, Defect Tracking, Agile Methodologies, CI/CD, SDLC, Team Player, Result-driven" />
-                        </li>
+                        <li><QueryList query="languages" api="/api/get-language-list" /></li>
+                        <li><QueryList query="technologies" api="/api/get-technology-list" /></li>
+                        <li><QueryList query="tools" api="/api/get-tool-list" /></li>
+                        <li><QueryList query="frameworks" api="/api/get-framework-list" /></li>
                     </ul>
                 </div>
             </div>
