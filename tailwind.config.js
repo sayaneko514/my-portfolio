@@ -7,12 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '1440': '1440px',
+      },
       colors: {
         highlight: "#75c3e6",
         highlightDark: '#cc005f',
-        primaryText: '#888888',
-        secondaryText: '#7d7d7d',
-        tertiaryText: '#6e6e6e',
       },
       variants: {
         textShadow: ['hover', 'focus'],

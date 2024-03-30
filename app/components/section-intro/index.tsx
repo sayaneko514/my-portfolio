@@ -84,7 +84,7 @@ const SectionIntro: React.FC<IntroTextProps> = ({
                 )}
             </h5>
             <div data-aos="fade-up" data-aos-delay="3000" className="container mb-[3rem]">
-                <p className="text-primaryText text-xs sm:text-base lg:text-lg text-gray-500 pt-3 lg:pt-6 px-[2rem] lg:px-[3rem] xl:px-[5rem] 2xl:px-[9rem] text-justify"
+                <p className="text-slate-600 text-xs sm:text-base lg:text-lg text-gray-500 pt-3 lg:pt-6 px-[2rem] lg:px-[3rem] xl:px-[5rem] 2xl:px-[9rem] text-center"
                     id={introContentId}
                     style={{
                         fontFamily: '"Lora", serif',
@@ -95,8 +95,8 @@ const SectionIntro: React.FC<IntroTextProps> = ({
                     }}>
                     {introContent}
                 </p>
-                {introContent.length > 300 && (
-                    <div className="text-center text-highlight mt-2 text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:hidden">
+                {introContent.length > 338 && (
+                    <div className="text-center text-highlight mt-2 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
                         <button onClick={toggleExpandText}>
                             {isExpanded ? "Show Less " : "Show More "}
                             {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
