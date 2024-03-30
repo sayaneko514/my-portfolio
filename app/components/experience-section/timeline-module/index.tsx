@@ -34,7 +34,7 @@ const TimeLine: React.FC<TimeLineProps> = ({
 
     return (
         <div className="relative grid grid-cols-7 items-start overflow-hidden" id="time-line-container">
-            <div className="col-span-3 text-right pr-4" id="left-column-container">
+            <div className="col-span-2 text-right pr-4" id="left-column-container">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-right"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -68,7 +68,7 @@ const TimeLine: React.FC<TimeLineProps> = ({
                     <FontAwesomeIcon icon={faBriefcase} size="lg" />
                 </button>
             </div>
-            <div className="col-span-3 pl-4" id="right-column-container">
+            <div className="col-span-4 pl-4" id="right-column-container">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-left"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -94,8 +94,8 @@ const TimeLine: React.FC<TimeLineProps> = ({
                     }}>{description}
                 </p>
             </div>
-            <div className="absolute inset-0 col-span-9">
-                <div className="h-full border-r border-slate-600 mx-auto" style={{ width: '1px' }}></div>
+            <div className="absolute inset-y-0 w-full col-start-3 col-end-4">
+                <div className="h-full w-px bg-slate-600 mx-auto"></div>
             </div>
         </div>
     )
