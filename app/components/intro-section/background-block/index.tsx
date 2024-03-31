@@ -4,18 +4,35 @@ import { INTRO_BACKGROUND_IMAGE_PATH } from '@/app/constants/path';
 
 const IntroBackground = () => {
     return (
-        <div className="absolute top-0 left-0 w-full h-full" id="intro-background">
-            <Image
-                src={INTRO_BACKGROUND_IMAGE_PATH}
-                alt="Intro Background"
-                fill
+        <div
+            id="intro-background"
+            style={{
+                position: 'relative',
+                height: '100%',
+                width: '100%',
+                clipPath: 'inset(0 0 0 0)',
+            }}>
+            <div
                 style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center bottom',
+                    position: 'fixed',
+                    height: '100%',
+                    width: '100%',
+                    left: '0',
+                    top: '0',
                 }}
-                quality={100}
-                priority={true}
-            />
+            >
+                <Image
+                    src={INTRO_BACKGROUND_IMAGE_PATH}
+                    alt="Intro Background"
+                    fill
+                    style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center bottom',
+                    }}
+                    quality={100}
+                    priority={true}
+                />
+            </div>
         </div>
     );
 };

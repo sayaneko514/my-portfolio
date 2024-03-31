@@ -39,7 +39,7 @@ const Intro = ({ children }: IntroProps) => {
             <div className="absolute top-0 left-0 w-full h-full" id="intro-background-container">
                 <IntroBackground />
             </div>
-            <div className="absolute w-full h-full bg-[#111111] opacity-50" id="intro-background-filter"></div>
+            <div className="absolute w-full h-full bg-[#111111] opacity-80" id="intro-background-filter"></div>
             <div className="z-20 relative flex flex-col justify-center items-center" style={{ transform: 'translateY(-2.1rem)' }} id="intro-content-container">
                 <HelloWorld startTyping={startFirstTyped} onComplete={onCompleteFirstTyped} />
                 <Name startSecondTyped={startSecondTyped} onCompleteSecondTyped={onCompleteSecondTyped} />
