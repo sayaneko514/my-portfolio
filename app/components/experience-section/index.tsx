@@ -132,7 +132,7 @@ const Experience = () => {
                     style={{
                         fontFamily: '"Poppins", sans-serif',
                         lineHeight: '2rem'
-                    }}>Academic Experience
+                    }}>Academic History
                     <button
                         onClick={toggleVisibility2}
                         id="work-history-toggle button"
