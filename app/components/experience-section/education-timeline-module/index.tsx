@@ -1,0 +1,127 @@
+'use client'
+
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+
+interface TimeLineProps {
+    programName: string;
+    programType: string;
+    schoolName: string;
+    location: string;
+    startDate: string;
+    endDate: string;
+    description: string;
+    url: string;
+}
+
+const EducationTimeLine: React.FC<TimeLineProps> = ({
+    programName,
+    programType,
+    schoolName,
+    location,
+    startDate,
+    endDate,
+    description,
+    url
+
+}) => {
+    const [isVisible, setIsVisible] = useState(true);
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+    };
+    const [isExpanded, setIsExpanded] = useState(false);
+    const maxHeight = isExpanded ? '1000px' : '160px';
+
+    const toggleExpandText = () => setIsExpanded(!isExpanded);
+
+    return (
+        <div className="relative grid grid-cols-3 lg:grid-cols-7 items-start" id="education=time-line-container">
+            <div className="col-span-3 order-3 lg:col-span-4 pl-[5rem] md:pl-[12rem] lg:pl-0 pr-4" id="left-column-container">
+                <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-right"
+                    id="program-name"
+                    style={{
+                        fontFamily: '"Poppins", sans-serif',
+                        lineHeight: 1.5,
+                        letterSpacing: '.2rem'
+                    }}>{programName}
+                </h3>
+                <h5 className="text-xs md:text-sm text-slate-600 text-center lg:text-right font-bold"
+                    id="program-type"
+                    style={{
+                        fontFamily: '"Poppins", sans-serif',
+                        lineHeight: 1.5,
+                        letterSpacing: '.2rem'
+                    }}>{programType}
+                </h5>
+                <p className={`text-xs md:text-sm text-slate-500 text-center pr-4 lg:pr-0 lg:text-right mt-4 mb-8 transition-opacity duration-400 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                    id="program-description"
+                    style={{
+                        fontFamily: '"Poppins", sans-serif',
+                        lineHeight: 1.5,
+                        letterSpacing: '.2rem',
+                        maxHeight: maxHeight,
+                        overflow: 'hidden',
+                        transition: 'max-height 0.3s ease-in-out',
+                    }}>{description}
+                </p>
+                {description.length > 270 && (
+                    <div className={`text-center text-highlight mb-4 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                        <button onClick={toggleExpandText}>
+                            {isExpanded ? "Show Less " : "Show More "}
+                            {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
+                        </button>
+                    </div>
+                )}
+            </div>
+            <div className="absolute inset-y-0 w-full col-start-1 col-end-2 lg:col-start-5 lg:col-end-6" id="time-line">
+                <div className="h-full w-px bg-slate-600 mx-auto"></div>
+            </div>
+            <div className="col-span-1 order-1 lg:order-3" id="education-button-container">
+                <Link href={url}>
+                    <button
+                        className="flex mx-auto items-center justify-center p-1 rounded-full bg-highlight text-white inline-block drop-shadow-xl transition ease-in-out delay-50 hover:translate-y-1 hover:scale-110 hover:bg-slate-600 duration-200"
+                        id="education-button"
+                        style={{ width: '50px', height: '50px' }}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.open(url, '_blank', 'noopener,noreferrer');
+                        }}
+                    >
+                        <FontAwesomeIcon icon={faGraduationCap} />
+                    </button>
+                </Link>
+            </div>
+            <div className="col-span-2 order-2 lg:col-span-2 pr-4 lg:pl-4 lg:order-3" id="right-column-container">
+                <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-left"
+                    id="school-name"
+                    style={{
+                        fontFamily: '"Poppins", sans-serif',
+                        lineHeight: 1.5,
+                        letterSpacing: '.2rem'
+                    }}
+                >{schoolName}
+                </h3>
+                <h5 className="text-xs md:text-sm text-slate-600 text-center lg:text-left font-bold"
+                    id="school-location"
+                    style={{
+                        fontFamily: '"Poppins", sans-serif',
+                        lineHeight: 1.5,
+                        letterSpacing: '.2rem'
+                    }}>{location}
+                </h5>
+                <p className="text-[0.6rem] md:text-xs text-slate-500 text-center lg:text-left mt-4 mb-6 pr-[10px] sm:pr-[20px] md:pr-[25px] lg:pr-[30px] 1440:pr-[40px] transition-opacity duration-400"
+                    id="program-duration"
+                    style={{
+                        fontFamily: '"Poppins", sans-serif',
+                        lineHeight: 1.5,
+                        letterSpacing: '.2rem'
+                    }}>{startDate} to {endDate}
+                </p>
+            </div>
+        </div>
+    )
+}
+
+export default EducationTimeLine;
