@@ -98,7 +98,7 @@ const Experience = () => {
                     <button
                         onClick={toggleVisibility1}
                         id="work-history-toggle button"
-                        className="text-highlight text-xs md:text-sm pl-2 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-slate-600 duration-200"
+                        className="pl-2"
                         style={{ width: '20px', height: '20px' }}>
                         {isVisible1 ? <FontAwesomeIcon icon={faEye}
                             className="text-highlight text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-600 duration-200" /> :
@@ -140,6 +140,7 @@ const Experience = () => {
                     <button
                         onClick={toggleVisibility2}
                         id="work-history-toggle button"
+                        className="pl-2"
                         style={{ width: '20px', height: '20px' }}>
                         {isVisible2 ?
                             <FontAwesomeIcon icon={faEye}
