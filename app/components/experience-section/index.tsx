@@ -98,9 +98,13 @@ const Experience = () => {
                     <button
                         onClick={toggleVisibility1}
                         id="work-history-toggle button"
-                        className="text-highlight text-xs md:text-sm pl-2 drop-shadow-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-slate-600 duration-200"
+                        className="text-highlight text-xs md:text-sm pl-2 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-slate-600 duration-200"
                         style={{ width: '20px', height: '20px' }}>
-                        {isVisible1 ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}
+                        {isVisible1 ? <FontAwesomeIcon icon={faEye}
+                            className="text-highlight text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-600 duration-200" /> :
+                            <FontAwesomeIcon icon={faEyeSlash}
+                                className="text-slate-600 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-highlight duration-200" />
+                        }
                     </button>
                 </h5>
                 {isVisible1 && (
@@ -136,9 +140,13 @@ const Experience = () => {
                     <button
                         onClick={toggleVisibility2}
                         id="work-history-toggle button"
-                        className="text-highlight text-xs md:text-sm pl-2 drop-shadow-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-slate-600 duration-200"
                         style={{ width: '20px', height: '20px' }}>
-                        {isVisible2 ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}
+                        {isVisible2 ?
+                            <FontAwesomeIcon icon={faEye}
+                                className="text-highlight text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-600 duration-200" /> :
+                            <FontAwesomeIcon icon={faEyeSlash}
+                                className="text-slate-600 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-highlight duration-200" />
+                        }
                     </button>
                 </h5>
                 {isVisible2 && (
