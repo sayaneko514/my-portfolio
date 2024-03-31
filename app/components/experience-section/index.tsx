@@ -90,6 +90,7 @@ const Experience = () => {
                     introContent='Tech graduate specializing in Information Technology with extensive hands-on experience as a SDET and web development. Proficient in test automation and well-versed in Agile methodologies and CI/CD practices. Skilled in a variety of programming languages and experienced in implementing cutting-edge solutions to enhance project outcomes.' />
                 <h5 className="text-highlight text-lg sm:text-2xl lg:text-3xl text-center pt-2 font-bold tracking-widest pb-[4rem] md:pb-[5rem]"
                     id="work-timeline-title"
+                    data-aos="fade-up" data-aos-delay="200"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
                         lineHeight: '2rem'
@@ -127,6 +128,7 @@ const Experience = () => {
                     </div>)}
                 <h5 className="text-highlight text-lg sm:text-2xl lg:text-3xl text-center pt-[4rem] font-bold tracking-widest pb-[4rem] md:pb-[5rem]"
                     id="Education-timeline-title"
+                    data-aos="fade-up" data-aos-delay="200"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
                         lineHeight: '2rem'

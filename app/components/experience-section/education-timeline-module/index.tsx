@@ -1,6 +1,8 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
@@ -27,17 +29,17 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
     url
 
 }) => {
-    const [isVisible, setIsVisible] = useState(true);
-    const toggleVisibility = () => {
-        setIsVisible(!isVisible);
-    };
     const [isExpanded, setIsExpanded] = useState(false);
     const maxHeight = isExpanded ? '1000px' : '160px';
 
     const toggleExpandText = () => setIsExpanded(!isExpanded);
 
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <div className="relative grid grid-cols-3 lg:grid-cols-7 items-start" id="education=time-line-container">
+        <div className="relative grid grid-cols-3 lg:grid-cols-7 items-start" id="education=time-line-container" data-aos="fade-up" data-aos-delay="200">
             <div className="col-span-3 order-3 lg:col-span-4 pl-[5rem] md:pl-[12rem] lg:pl-0 pr-4" id="left-column-container">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-right"
                     id="program-name"
@@ -55,7 +57,7 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
                         letterSpacing: '.2rem'
                     }}>{programType}
                 </h5>
-                <p className={`text-xs md:text-sm text-slate-500 text-center pr-4 lg:pr-0 lg:text-right mt-4 mb-8 transition-opacity duration-400 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                <p className="text-xs md:text-sm text-slate-500 text-center pr-4 lg:pr-0 lg:text-right mt-4 mb-8 transition-opacity duration-400"
                     id="program-description"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -67,7 +69,7 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
                     }}>{description}
                 </p>
                 {description.length > 270 && (
-                    <div className={`text-center text-highlight mb-4 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                    <div className="text-center text-highlight mb-4 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
                         <button onClick={toggleExpandText}>
                             {isExpanded ? "Show Less " : "Show More "}
                             {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
@@ -75,10 +77,10 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
                     </div>
                 )}
             </div>
-            <div className="absolute inset-y-0 w-full col-start-1 col-end-2 lg:col-start-5 lg:col-end-6" id="time-line">
+            <div className="absolute inset-y-0 w-full col-start-1 col-end-2 lg:col-start-5 lg:col-end-6" id="time-line" data-aos="fade-up" data-aos-delay="400">
                 <div className="h-full w-px bg-slate-600 mx-auto"></div>
             </div>
-            <div className="col-span-1 order-1 lg:order-3" id="education-button-container">
+            <div className="col-span-1 order-1 lg:order-3" id="education-button-container" data-aos="fade-up" data-aos-delay="400">
                 <Link href={url}>
                     <button
                         className="flex mx-auto items-center justify-center p-1 rounded-full bg-highlight text-white inline-block drop-shadow-xl transition ease-in-out delay-50 hover:translate-y-1 hover:scale-110 hover:bg-slate-600 duration-200"
@@ -93,7 +95,7 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
                     </button>
                 </Link>
             </div>
-            <div className="col-span-2 order-2 lg:col-span-2 pr-4 lg:pl-4 lg:order-3" id="right-column-container">
+            <div className="col-span-2 order-2 lg:col-span-2 pr-4 lg:pl-4 lg:order-3" id="right-column-container" data-aos="fade-up" data-aos-delay="600">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-left"
                     id="school-name"
                     style={{

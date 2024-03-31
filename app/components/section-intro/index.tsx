@@ -83,7 +83,7 @@ const SectionIntro: React.FC<IntroTextProps> = ({
                     />
                 )}
             </h5>
-            <div data-aos="fade-up" data-aos-delay="3000" className="container mb-[3rem]">
+            <div data-aos="fade-up" data-aos-delay="400" className="container mb-[3rem]">
                 <p className="text-slate-600 text-xs sm:text-base lg:text-lg text-gray-500 pt-3 lg:pt-6 px-[2rem] lg:px-[3rem] xl:px-[5rem] 2xl:px-[9rem] text-center"
                     id={introContentId}
                     style={{

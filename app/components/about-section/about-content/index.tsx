@@ -9,7 +9,7 @@ const AboutContent = () => {
     return (
         <>
             <div className="flex flex-wrap md:flex-nowrap">
-                <div className="w-full md:w-1/2 px-2" data-aos="fade-right" data-aos-delay="2800" id="about-left-detail-container">
+                <div className="w-full md:w-1/2 px-2" data-aos="fade-right" data-aos-delay="400" id="about-left-detail-container">
                     <DetailTitle title="profile" />
                     <div className="flex items-start mt-7" id="about-profile-picture-container">
                         <ProfilePicture />
@@ -34,7 +34,7 @@ const AboutContent = () => {
                     </ul>
                 </div>
 
-                <div className="w-full md:w-1/2 mt-12 md:mt-0 px-2" data-aos="fade-left" data-aos-delay="2800" id="about-right-detail-container">
+                <div className="w-full md:w-1/2 mt-12 md:mt-0 px-2" data-aos="fade-left" data-aos-delay="400" id="about-right-detail-container">
                     <DetailTitle title="skills" />
                     <ul className="list-none" id="about-right-list">
                         <li><QueryList query="languages" api="/api/get-language-list" /></li>

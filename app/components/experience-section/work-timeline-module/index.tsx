@@ -1,9 +1,11 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface TimeLineProps {
     role: string;
@@ -33,9 +35,13 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
 
     const toggleExpandText = () => setIsExpanded(!isExpanded);
 
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
 
     return (
-        <div className="relative grid grid-cols-3 lg:grid-cols-7 items-start" id="work-time-line-container">
+        <div className="relative grid grid-cols-3 lg:grid-cols-7 items-start" id="work-time-line-container" data-aos="fade-up" data-aos-delay="200">
             <div className="col-span-2 order-2 lg:order-1 text-right pr-4" id="left-column-container">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-right"
                     id="role-title"
@@ -62,10 +68,10 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     }}>{startDate} to {endDate}
                 </p>
             </div>
-            <div className="absolute inset-y-0 w-full col-start-1 col-end-2 lg:col-start-3 lg:col-end-4" id="time-line">
+            <div className="absolute inset-y-0 w-full col-start-1 col-end-2 lg:col-start-3 lg:col-end-4" id="time-line" data-aos="fade-up" data-aos-delay="400">
                 <div className="h-full w-px bg-slate-600 mx-auto"></div>
             </div>
-            <div className="col-span-1 order-1 lg:order-2 text-center" id="work-button-container">
+            <div className="col-span-1 order-1 lg:order-2 text-center" id="work-button-container" data-aos="fade-up" data-aos-delay="400">
                 <Link href={url}>
                     <button
                         className="flex mx-auto items-center justify-center p-1 rounded-full bg-highlight text-white inline-block drop-shadow-xl transition ease-in-out delay-50 hover:translate-y-1 hover:scale-110 hover:bg-slate-600 duration-200"
@@ -80,7 +86,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     </button>
                 </Link>
             </div>
-            <div className="col-span-3 order-3 lg:col-span-4 lg:order-3 pl-[5rem] pr-4 md:pl-[12rem]  lg:pl-4" id="right-column-container">
+            <div className="col-span-3 order-3 lg:col-span-4 lg:order-3 pl-[5rem] pr-4 md:pl-[12rem]  lg:pl-4" id="right-column-container" data-aos="fade-up" data-aos-delay="600">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-left"
                     id="company-name"
                     style={{
