@@ -116,7 +116,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     }}>{description}
                 </p>
                 {description.length > 300 && (
-                    <div className="text-center text-highlight mb-4 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none">
+                    <div className="text-center text-highlight mb-4 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
                         <button onClick={toggleExpandText}>
                             {isExpanded ? "Show Less " : "Show More "}
                             {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
