@@ -88,7 +88,7 @@ const Experience = () => {
                     introTitle='More Regarding My Credentials...'
                     introTitleColor='black'
                     introContent='Tech graduate specializing in Information Technology with extensive hands-on experience as a SDET and web development. Proficient in test automation and well-versed in Agile methodologies and CI/CD practices. Skilled in a variety of programming languages and experienced in implementing cutting-edge solutions to enhance project outcomes.' />
-                <h5 className="text-highlight text-lg sm:text-2xl lg:text-3xl text-center pt-2 font-bold tracking-widest pb-[4rem] md:pb-[5rem]"
+                <h5 className="text-lg sm:text-2xl lg:text-3xl text-center pt-2 py-6 font-bold tracking-widest lg:pb-[5rem]"
                     id="work-timeline-title"
                     data-aos="fade-up" data-aos-delay="200"
                     style={{
@@ -101,9 +101,9 @@ const Experience = () => {
                         className="pl-2"
                         style={{ width: '20px', height: '20px' }}>
                         {isVisible1 ? <FontAwesomeIcon icon={faEye}
-                            className="text-highlight text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-600 duration-200" /> :
+                            className="text-slate-800 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-500 duration-200" /> :
                             <FontAwesomeIcon icon={faEyeSlash}
-                                className="text-slate-600 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-highlight duration-200" />
+                                className="text-slate-500 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-slate-800 duration-200" />
                         }
                     </button>
                 </h5>
@@ -130,7 +130,7 @@ const Experience = () => {
                             />
                         ))}
                     </div>)}
-                <h5 className="text-highlight text-lg sm:text-2xl lg:text-3xl text-center pt-[4rem] font-bold tracking-widest pb-[4rem] md:pb-[5rem]"
+                <h5 className="text-lg sm:text-2xl lg:text-3xl text-center font-bold tracking-widest py-6 md:py-[5rem]"
                     id="Education-timeline-title"
                     data-aos="fade-up" data-aos-delay="200"
                     style={{
@@ -144,9 +144,9 @@ const Experience = () => {
                         style={{ width: '20px', height: '20px' }}>
                         {isVisible2 ?
                             <FontAwesomeIcon icon={faEye}
-                                className="text-highlight text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-600 duration-200" /> :
+                                className="text-slate-800 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:text-slate-500 duration-200" /> :
                             <FontAwesomeIcon icon={faEyeSlash}
-                                className="text-slate-600 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-highlight duration-200" />
+                                className="text-slate-500 text-xs md:text-sm pl-2 drop-shadow transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 hover:text-slate-800 duration-200" />
                         }
                     </button>
                 </h5>

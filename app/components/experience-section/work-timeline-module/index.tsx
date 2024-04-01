@@ -41,8 +41,8 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
 
 
     return (
-        <div className="relative grid grid-cols-3 lg:grid-cols-7 items-start" id="work-time-line-container" data-aos="fade-up" data-aos-delay="200">
-            <div className="col-span-2 order-2 lg:order-1 text-right pr-4" id="left-column-container">
+        <div className="relative grid grid-cols-4 lg:grid-cols-7 items-start" id="work-time-line-container" data-aos="fade-up" data-aos-delay="200">
+            <div className="col-span-4 lg:col-span-2 order-2 lg:order-1 text-right pl-[4rem] md:pl-[10rem] lg:pl-0 pr-4" id="left-column-container">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-right"
                     id="role-title"
                     style={{
@@ -51,7 +51,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                         letterSpacing: '.2rem'
                     }}>{role}
                 </h3>
-                <h5 className="text-xs md:text-sm text-slate-600 text-center lg:text-right font-bold"
+                <h5 className="text-sm text-slate-600 text-center lg:text-right font-bold hidden lg:inline"
                     id="role-type"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -59,7 +59,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                         letterSpacing: '.2rem'
                     }}>{roleType}
                 </h5>
-                <p className="text-[0.6rem] md:text-xs text-slate-500 text-center lg:text-right mt-4 transition-opacity duration-400 pb-2"
+                <p className="text-[0.6rem] md:text-xs text-slate-500 text-center lg:text-right transition-opacity duration-400 py-2"
                     id="role-duration"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -86,7 +86,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     </button>
                 </Link>
             </div>
-            <div className="col-span-3 order-3 lg:col-span-4 lg:order-3 pl-[5rem] pr-4 md:pl-[12rem]  lg:pl-4" id="right-column-container" data-aos="fade-up" data-aos-delay="600">
+            <div className=" order-3 col-span-4 lg:order-3 pr-4 pl-[4rem] md:pl-[10rem] lg:pl-4" id="right-column-container" data-aos="fade-up" data-aos-delay="600">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-left"
                     id="company-name"
                     style={{
@@ -96,7 +96,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     }}
                 >{companyName}
                 </h3>
-                <h5 className="text-xs md:text-sm text-slate-600 text-center lg:text-left font-bold"
+                <h5 className="text-sm text-slate-600 text-center lg:text-left font-bold hidden lg:inline"
                     id="company-location"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -104,7 +104,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                         letterSpacing: '.2rem'
                     }}>{location}
                 </h5>
-                <p className="text-xs md:text-sm text-slate-500 text-center lg:text-left mt-4 mb-6 pr-[10px] sm:pr-[20px] md:pr-[25px] lg:pr-[30px] 1440:pr-[40px] transition-opacity duration-400"
+                <p className="text-xs md:text-sm text-slate-500 text-center lg:text-left mt-4 pr-[10px] sm:pr-[20px] md:pr-[25px] lg:pr-[30px] 1440:pr-[40px] 1440:mb-[4rem] transition-opacity duration-400"
                     id="role-description"
                     style={{
                         fontFamily: '"Poppins", sans-serif',
@@ -116,7 +116,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     }}>{description}
                 </p>
                 {description.length > 300 && (
-                    <div className="text-center text-highlight mb-4 text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
+                    <div className="text-center text-highlight mb-[4rem] text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
                         <button onClick={toggleExpandText}>
                             {isExpanded ? "Show Less " : "Show More "}
                             {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}

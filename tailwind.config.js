@@ -11,11 +11,7 @@ module.exports = {
         '1440': '1440px',
       },
       colors: {
-        highlight: "#75c3e6",
-        highlightDark: '#cc005f',
-      },
-      variants: {
-        textShadow: ['hover', 'focus'],
+        highlight: "#FFA500",
       },
     },
   },
