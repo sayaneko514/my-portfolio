@@ -13,16 +13,20 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tabler/icons-react": "^3.1.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@types/mongodb": "^4.0.7",
     "aos": "^2.3.4",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.25",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.3",
     "next": "^14.1.4",
     "react": "^18",
     "react-dom": "^18",
     "react-transition-group": "^4.4.5",
-    "react-typed": "^2.0.12"
+    "react-typed": "^2.0.12",
+    "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

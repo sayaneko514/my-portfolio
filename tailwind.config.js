@@ -12,6 +12,10 @@ module.exports = {
       },
       colors: {
         highlight: "#FFA500",
+        highlight2: '#ff5500',
+      },
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
     },
   },

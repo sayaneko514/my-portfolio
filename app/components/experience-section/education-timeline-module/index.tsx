@@ -39,7 +39,7 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
     }, []);
 
     return (
-        <div className="relative grid grid-cols-4 lg:grid-cols-7 items-start" id="education=time-line-container" data-aos="fade-up" data-aos-delay="200">
+        <div className="relative grid grid-cols-4 lg:grid-cols-7" id="education=time-line-container" data-aos="fade-up" data-aos-delay="200">
             <div className="col-span-4 order-3 lg:col-span-4 pl-[4rem] md:pl-[10rem] lg:pl-0 pr-4 justify-center" id="left-column-container">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-right"
                     id="program-name"
@@ -49,20 +49,20 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
                         letterSpacing: '.2rem'
                     }}>{programName}
                 </h3>
-                <h5 className="text-sm text-slate-600 text-right font-bold hidden"
-                    id="program-type"
-                    style={{
-                        fontFamily: '"Poppins", sans-serif',
-                        lineHeight: 1.5,
-                        letterSpacing: '.2rem'
-                    }}>{programType}
-                </h5>
+                <div className="text-right" id="program-type-container">
+                    <h5 className="text-sm text-slate-600 font-bold hidden lg:inline"
+                        id="program-type"
+                        style={{
+                            fontFamily: '"Poppins", sans-serif',
+                            lineHeight: 1.5,
+                            letterSpacing: '.2rem'
+                        }}>{programType}
+                    </h5></div>
                 <p className="text-xs md:text-sm text-slate-500 text-center pr-4 lg:pr-0 lg:text-right mt-4 1440:mb-[4rem] transition-opacity duration-400"
                     id="program-description"
                     style={{
-                        fontFamily: '"Poppins", sans-serif',
-                        lineHeight: 1.5,
-                        letterSpacing: '.2rem',
+                        fontFamily: '"Lora", serif',
+                        lineHeight: '1.9rem',
                         maxHeight: maxHeight,
                         overflow: 'hidden',
                         transition: 'max-height 0.3s ease-in-out',

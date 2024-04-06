@@ -107,9 +107,8 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                 <p className="text-xs md:text-sm text-slate-500 text-center lg:text-left mt-4 pr-[10px] sm:pr-[20px] md:pr-[25px] lg:pr-[30px] 1440:pr-[40px] 1440:mb-[4rem] transition-opacity duration-400"
                     id="role-description"
                     style={{
-                        fontFamily: '"Poppins", sans-serif',
-                        lineHeight: 1.5,
-                        letterSpacing: '.2rem',
+                        fontFamily: '"Lora", serif',
+                        lineHeight: '1.9rem',
                         maxHeight: maxHeight,
                         overflow: 'hidden',
                         transition: 'max-height 0.3s ease-in-out',
