@@ -34,7 +34,7 @@ const QueryList: React.FC<QueryProps> = ({
     };
 
     fetchData();
-  }, []);
+  }, [API_URI]);
 
   return (
     <DetailSubTitle title={query} hasTextContent={true} textContent={lists} />

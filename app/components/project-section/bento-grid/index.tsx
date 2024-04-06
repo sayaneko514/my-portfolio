@@ -2,6 +2,29 @@
 
 import { cn } from '@/app/utils/cn';
 import React from 'react';
+import {
+    IconBrandTypescript,
+    IconBrandJavascript,
+    IconBrandReact,
+    IconBrandMongodb,
+    IconBrandPrisma,
+    IconBrandMysql,
+    IconBrandTailwind,
+    IconBrandVercel,
+} from "@tabler/icons-react";
+
+const iconMapping: { [key: string]: React.ReactNode | undefined } = {
+    Typescript: <IconBrandTypescript className="h-4 w-4" />,
+    Javascript: <IconBrandJavascript className="h-4 w-4" />,
+    React: <IconBrandReact className="h-4 w-4" />,
+    Mongodb: <IconBrandMongodb className="h-4 w-4" />,
+    Prisma: <IconBrandPrisma className="h-4 w-4" />,
+    Mysql: <IconBrandMysql className="h-4 w-4" />,
+    Tailwind: <IconBrandTailwind className="h-4 w-4" />,
+    Vercel: <IconBrandVercel className="h-4 w-4" />,
+};
+
+
 
 export const BentoGrid = ({
     className,
@@ -28,14 +51,14 @@ export const BentoGridItem = ({
     description,
     imageStatic,
     imageGif,
-    icons,
+    elements,
 }: {
     className?: string;
     title?: string | React.ReactNode;
     description?: string | React.ReactNode;
     imageStatic?: string;
     imageGif?: string;
-    icons?: [React.ReactNode];
+    elements?: string[];
 }) => {
     const [isHovered, setIsHovered] = React.useState(false);
 
@@ -57,18 +80,21 @@ export const BentoGridItem = ({
                     id="project-cover-image"
                     className="rounded-md w-full object-cover transition duration-300"
                     src={isHovered ? imageGif : imageStatic}
-                    alt="card"
+                    alt="card cover"
                     loading="lazy"
                 />
             </div>
             <div
                 id="project-icons"
                 className="group-hover/bento:translate-x-2 transition duration-200">
-                {icons && icons.map((icon, index) => (
-                    <div key={index} className="flex justify-start items-center space-x-1 text-slate-300">
-                        {icon}
-                    </div>
-                ))}
+
+                <div className="flex justify-start items-center space-x-1 text-slate-300">
+                    {elements?.map((element, index) => (
+                        <React.Fragment key={index}>
+                            {iconMapping[element]}
+                        </React.Fragment>
+                    ))}
+                </div>
                 <div
                     id="projrect-title"
                     className="uppercase font-bold text-highlight mb-2 mt-2"
