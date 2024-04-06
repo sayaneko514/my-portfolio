@@ -2,6 +2,7 @@
 
 import { cn } from '@/app/utils/cn';
 import React from 'react';
+import Image from 'next/image';
 import {
     IconBrandTypescript,
     IconBrandJavascript,
@@ -54,13 +55,14 @@ export const BentoGridItem = ({
     elements,
 }: {
     className?: string;
-    title?: string | React.ReactNode;
+    title: string | React.ReactNode;
     description?: string | React.ReactNode;
-    imageStatic?: string;
-    imageGif?: string;
-    elements?: string[];
+    imageStatic: string;
+    imageGif: string;
+    elements: string[];
 }) => {
     const [isHovered, setIsHovered] = React.useState(false);
+    const imageKey = isHovered ? 'gif' : 'static';
 
     return (
         <div
@@ -76,13 +78,17 @@ export const BentoGridItem = ({
                 className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white overflow-hidden"
 
             >
-                <img
-                    id="project-cover-image"
-                    className="rounded-md w-full object-cover transition duration-300"
-                    src={isHovered ? imageGif : imageStatic}
-                    alt="card cover"
-                    loading="lazy"
-                />
+                <div key={imageKey} style={{ position: 'relative', width: '100%', height: '100%' }}>
+                    <Image
+                        src={isHovered ? imageGif : imageStatic}
+                        alt="card cover"
+                        fill
+                        style={{
+                            objectFit: 'cover'
+                        }}
+                        className="rounded-md transition duration-300"
+                    />
+                </div>
             </div>
             <div
                 id="project-icons"
