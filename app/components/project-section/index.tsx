@@ -1,25 +1,35 @@
-import React from "react";
+'use client'
+
+import React, { useState, useEffect } from "react";
 import SectionIntro from '../section-intro';
 import { BentoGrid, BentoGridItem } from './bento-grid';
 
-const Project = () => {
+interface ProjectList {
+    projectName: string;
+    description: string;
+    elements: string[];
+    startDate: string;
+    hadCompleted: boolean;
+    endDate: string;
+    imageName: string;
+}
 
-    const items = [
-        {
-            title: "Protfolio Page",
-            description: "A sleek personal portfolio page built with Next.js, featuring React, TypeScript, JavaScript, and Tailwind CSS for responsive design, with MongoDB as the backend. Hosted on Vercel for seamless deployment and performance.",
-            imageStatic: '/images/Portfolio.png',
-            imageGif: '/images/Portfolio.gif',
-            elements: ['React', 'Typescript', 'Javascript', 'Tailwind', 'Mongodb', 'Vercel']
-        },
-        {
-            title: "Barbie Gym",
-            description: "Barbie Gym's landing page is the start of an expansive project, poised to evolve into a comprehensive login portal for a fitness center in Japan, blending T3 tech with intuitive design.",
-            imageStatic: '/images/Barbie.png',
-            imageGif: '/images/Barbie.gif',
-            elements: ['React', 'Typescript', 'Javascript', 'Tailwind', 'Mysql', 'Prisma', 'Vercel']
-        },
-    ];
+const Project = () => {
+    const [projectList, setProjectList] = useState<ProjectList[]>([]);
+
+    useEffect(() => {
+        const fetchProjectList = async () => {
+            try {
+                const response = await fetch('/api/get-project-list');
+                const data = await response.json();
+                setProjectList(data);
+            } catch (error) {
+                console.log("Failed to fetch project list:", error);
+            }
+        };
+
+        fetchProjectList();
+    }, []);
 
     return (
         <section className="bg-gray-500" id="gallery-section">
@@ -30,15 +40,14 @@ const Project = () => {
                     introTitleColor='white'
                     introContent='' />
                 <BentoGrid className="max-w-4xl mx-auto">
-                    {items.map((item, i) => (
+                    {projectList.map((project, index) => (
                         <BentoGridItem
-                            key={i}
-                            title={item.title}
-                            description={item.description}
-                            imageStatic={item.imageStatic}
-                            imageGif={item.imageGif}
-                            elements={item.elements}
-                            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                            key={index}
+                            projectName={project.projectName}
+                            description={project.description}
+                            imageName={project.imageName}
+                            elements={project.elements}
+                            className={index === 3 || index === 6 ? "md:col-span-2" : ""}
                         />
                     ))}
                 </BentoGrid>

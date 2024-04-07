@@ -3,26 +3,45 @@
 import { cn } from '@/app/utils/cn';
 import React from 'react';
 import Image from 'next/image';
+
+
 import {
-    IconBrandTypescript,
-    IconBrandJavascript,
-    IconBrandReact,
-    IconBrandMongodb,
-    IconBrandPrisma,
-    IconBrandMysql,
-    IconBrandTailwind,
-    IconBrandVercel,
-} from "@tabler/icons-react";
+    SiPrisma,
+    SiOpencv,
+    SiYolo,
+    SiRaspberrypi,
+    SiLinux,
+    SiAndroid,
+    SiKotlin,
+} from "react-icons/si";
+
+import {
+    BiLogoTailwindCss,
+    BiLogoJavascript,
+    BiLogoTypescript,
+    BiLogoReact,
+    BiLogoMongodb,
+    BiLogoPython,
+    BiLogoJava,
+    BiLogoFirebase
+} from "react-icons/bi";
 
 const iconMapping: { [key: string]: React.ReactNode | undefined } = {
-    Typescript: <IconBrandTypescript className="h-4 w-4" />,
-    Javascript: <IconBrandJavascript className="h-4 w-4" />,
-    React: <IconBrandReact className="h-4 w-4" />,
-    Mongodb: <IconBrandMongodb className="h-4 w-4" />,
-    Prisma: <IconBrandPrisma className="h-4 w-4" />,
-    Mysql: <IconBrandMysql className="h-4 w-4" />,
-    Tailwind: <IconBrandTailwind className="h-4 w-4" />,
-    Vercel: <IconBrandVercel className="h-4 w-4" />,
+    Typescript: <BiLogoTypescript className="h-4 w-4" />,
+    Javascript: <BiLogoJavascript className="h-4 w-4" />,
+    React: <BiLogoReact className="h-4 w-4" />,
+    Mongodb: <BiLogoMongodb className="h-4 w-4" />,
+    Prisma: <SiPrisma className="h-3 w-3" />,
+    Tailwind: <BiLogoTailwindCss className="h-4 w-4" />,
+    Python: <BiLogoPython className="h-4 w-4" />,
+    Opencv: <SiOpencv className="h-3 w-3" />,
+    Yolo: <SiYolo className="h-4 w-4" />,
+    Raspberrypi: <SiRaspberrypi className="h-3 w-3" />,
+    Linux: <SiLinux className="h-3 w-3" />,
+    Android: <SiAndroid className="h-4 w-4" />,
+    Kotlin: <SiKotlin className="h-3 w-3" />,
+    Firebase: <BiLogoFirebase className="h-4 w-4" />,
+    Java: <BiLogoJava className="h-4 w-4" />,
 };
 
 
@@ -48,20 +67,20 @@ export const BentoGrid = ({
 
 export const BentoGridItem = ({
     className,
-    title,
+    projectName,
     description,
-    imageStatic,
-    imageGif,
+    imageName,
     elements,
 }: {
     className?: string;
-    title: string | React.ReactNode;
-    description?: string | React.ReactNode;
-    imageStatic: string;
-    imageGif: string;
+    projectName: string;
+    description?: string;
+    imageName: string;
     elements: string[];
 }) => {
     const [isHovered, setIsHovered] = React.useState(false);
+    const imageStatic = `/images/${imageName}_thumbnail.png`;
+    const imageGif = `/images/${imageName}_thumbnail.gif`;
     const imageKey = isHovered ? 'gif' : 'static';
 
     return (
@@ -81,7 +100,7 @@ export const BentoGridItem = ({
                 <div key={imageKey} style={{ position: 'relative', width: '100%', height: '100%' }}>
                     <Image
                         src={isHovered ? imageGif : imageStatic}
-                        alt="card cover"
+                        alt={`${projectName} cover`}
                         fill
                         style={{
                             objectFit: 'cover'
@@ -108,7 +127,7 @@ export const BentoGridItem = ({
                         fontFamily: '"Poppins", sans-serif',
                         lineHeight: 1.5,
                         letterSpacing: '.1rem'
-                    }}>{title}
+                    }}>{projectName}
                 </div>
                 <div
                     id="project-description"
