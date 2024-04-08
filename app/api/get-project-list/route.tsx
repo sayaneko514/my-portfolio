@@ -8,7 +8,7 @@ export async function GET() {
         await client.connect();
         const db = client.db('portfolio');
         const languages = await db.collection('project')
-            .find().sort({ startDate: -1 })
+            .find().sort({ startDate: -1 }).limit(10)
             .toArray();
 
         return new Response(JSON.stringify(languages), {
