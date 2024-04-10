@@ -21,6 +21,7 @@ import {
     SiOpencv,
     SiYolo,
     SiRaspberrypi,
+    SiProcessingfoundation,
 } from "react-icons/si";
 import {
     BiLogoTailwindCss,
@@ -47,6 +48,7 @@ const iconMapping: { [key: string]: { icon: React.ElementType, label: string, cl
     Kotlin: { icon: IconBrandKotlin, label: "Kotlin", className: "h-4 w-4" },
     Firebase: { icon: IconBrandFirebase, label: "Firebase", className: "h-4 w-4" },
     Java: { icon: BiLogoJava, label: "Java", className: "h-4 w-4" },
+    Processing: { icon: SiProcessingfoundation, label: "Processing", className: "h-3.5 w-3.5" }
 };
 
 export const BentoGrid = ({
@@ -102,11 +104,11 @@ export const BentoGridItem = ({
         description: item[1],
         content: (
             <div className="flex flex-col items-center justify-center w-full h-full text-black">
-                <div className="flex justify-center w-full">
+                <div className="flex pt-10 justify-center w-full">
                     <Image
                         src={item[2]}
                         width={500}
-                        height={500}
+                        height={300}
                         alt={`${item[0]} image`}
                     />
                 </div>
