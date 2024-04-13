@@ -74,7 +74,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
             <div className="col-span-1 order-1 lg:order-2 text-center" id="work-button-container" data-aos="fade-up" data-aos-delay="400">
                 <Link href={url}>
                     <button
-                        className="flex mx-auto items-center justify-center p-1 rounded-full bg-highlight text-white inline-block drop-shadow-xl transition ease-in-out delay-50 hover:translate-y-1 hover:scale-110 hover:bg-slate-600 duration-200"
+                        className="flex mx-auto items-center justify-center p-1 rounded-full bg-highlight text-white inline-block drop-shadow-xl transition ease-in-out delay-50 hover:scale-110 hover:bg-slate-600 duration-200"
                         id="work-button"
                         style={{ width: '50px', height: '50px' }}
                         onClick={(e) => {
