@@ -16,6 +16,8 @@ interface ProjectList {
     imageName: string;
     detail: DetailItem[]
     link: string;
+    hasDemo: boolean;
+    demo: string;
 }
 
 const Project = () => {
@@ -57,6 +59,8 @@ const Project = () => {
                             endDate={project.hasComplete ? project.endDate : "Present"}
                             detail={project.detail}
                             link={project.link}
+                            demo={project.demo}
+                            hasDemo={project.hasDemo}
                         />
                     ))}
                 </BentoGrid>

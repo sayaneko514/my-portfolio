@@ -6,7 +6,7 @@ import Image from 'next/image';
 import CardModal from '../card-modal';
 import { StickyScroll } from '../sticky-scroll';
 import TooltipIcon from '../icon-tooltip';
-import { FaLink } from "react-icons/fa6";
+import { FaCirclePlay, FaGithub } from "react-icons/fa6";
 import {
     IconBrandMysql,
     IconBrandNextjs,
@@ -48,7 +48,9 @@ const iconMapping: { [key: string]: { icon: React.ElementType, label: string, cl
     Kotlin: { icon: IconBrandKotlin, label: "Kotlin", className: "h-4 w-4" },
     Firebase: { icon: IconBrandFirebase, label: "Firebase", className: "h-4 w-4" },
     Java: { icon: BiLogoJava, label: "Java", className: "h-4 w-4" },
-    Processing: { icon: SiProcessingfoundation, label: "Processing", className: "h-3.5 w-3.5" }
+    Processing: { icon: SiProcessingfoundation, label: "Processing", className: "h-3.5 w-3.5" },
+    GitHub: { icon: FaGithub, label: "GitHub", className: "h-4 w-4" }
+
 };
 
 export const BentoGrid = ({
@@ -82,6 +84,8 @@ export const BentoGridItem = ({
     endDate,
     detail,
     link,
+    demo,
+    hasDemo,
 }: {
     className?: string;
     projectName: string;
@@ -92,6 +96,8 @@ export const BentoGridItem = ({
     endDate?: string;
     detail: DetailItem[];
     link: string;
+    demo: string;
+    hasDemo: boolean;
 }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -104,18 +110,19 @@ export const BentoGridItem = ({
         description: item[1],
         content: (
             <div className="flex flex-col items-center justify-center w-full h-full text-black">
-                <div className="flex pt-10 justify-center w-full">
+                <div className="flex pt-[5rem] justify-center w-full">
                     <Image
                         src={item[2]}
-                        width={500}
+                        width={490}
                         height={300}
                         alt={`${item[0]} image`}
+                        className='rounded-lg'
                     />
                 </div>
                 <div>
                     <div
                         id="project-timeline"
-                        className="flex justify-center text-black pt-4"
+                        className="flex justify-center text-black pt-8"
                         style={{
                             fontFamily: '"Poppins", sans-serif',
                             lineHeight: 1.5,
@@ -126,8 +133,40 @@ export const BentoGridItem = ({
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                        ><FaLink className="h-6 w-6 pl-2 drop-shadow-xl transition ease-in-out delay-50 hover:scale-110 hover:text-highlight" />
+                        >
+                            <TooltipIcon
+                                IconComponent={FaGithub}
+                                label="Github Repository"
+                                iconProps={{
+                                    className: "h-6 w-6 pl-2 drop-shadow-xl transition ease-in-out delay-50 hover:scale-110 hover:text-highlight",
+                                }}
+                            />
                         </a>
+                        {
+                            hasDemo ? (
+                                <a
+                                    href={demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <TooltipIcon
+                                        IconComponent={FaCirclePlay}
+                                        label="Live Demo"
+                                        iconProps={{
+                                            className: "h-6 w-6 pl-2 drop-shadow-xl transition ease-in-out delay-50 hover:scale-110 hover:text-highlight",
+                                        }}
+                                    />
+                                </a>
+                            ) : (
+                                <TooltipIcon
+                                    IconComponent={FaCirclePlay}
+                                    label="Demo Unavailable"
+                                    iconProps={{
+                                        className: "h-6 w-6 pl-2 drop-shadow-xl text-gray-500",
+                                    }}
+                                />
+                            )
+                        }
                     </div >
                     <div className="flex justify-center w-full pt-2 space-x-1 text-gray-700 scale-125">
                         {elements?.map((elementKey, index) => {

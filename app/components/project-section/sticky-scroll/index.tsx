@@ -40,8 +40,16 @@ export const StickyScroll = ({
         setActiveCard(closestBreakpointIndex);
     });
 
+    const backgroundColors = [
+        "#9ca3af",
+        "#ffffff",
+    ];
+
     return (
         <motion.div
+            animate={{
+                backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+            }}
             className="h-[30rem] overflow-y-auto flex justify-center relative space-x-6 rounded-md p-2"
             ref={ref}
         >
@@ -87,7 +95,7 @@ export const StickyScroll = ({
             </div>
             <motion.div
                 className={cn(
-                    "hidden lg:block h-60 w-100 rounded-md bg-white sticky top-10",
+                    "hidden lg:block h-60 w-100 sticky top-10",
                     contentClassName
                 )}
             >
