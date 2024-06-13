@@ -7,11 +7,11 @@ export async function GET() {
     try {
         await client.connect();
         const db = client.db('portfolio');
-        const tools = await db.collection('skill')
+        const frameworks = await db.collection('skill')
             .find({ type: 'framework' }, { projection: { name: 1, _id: 0 } })
             .toArray();
 
-        return new Response(JSON.stringify(tools), {
+        return new Response(JSON.stringify(frameworks), {
             status: 200,
             headers: {
                 'Content-Type': 'application/json',

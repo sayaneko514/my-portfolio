@@ -7,11 +7,11 @@ export async function GET() {
     try {
         await client.connect();
         const db = client.db('portfolio');
-        const languages = await db.collection('project')
+        const projects = await db.collection('project')
             .find().sort({ startDate: -1 }).limit(10)
             .toArray();
 
-        return new Response(JSON.stringify(languages), {
+        return new Response(JSON.stringify(projects), {
             status: 200,
             headers: {
                 'Content-Type': 'application/json',

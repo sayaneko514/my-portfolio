@@ -27,7 +27,6 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
     endDate,
     description,
     url
-
 }) => {
 
     const [isExpanded, setIsExpanded] = useState(false);
@@ -38,7 +37,6 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
-
 
     return (
         <div className="relative grid grid-cols-4 lg:grid-cols-7 items-start" id="work-time-line-container" data-aos="fade-up" data-aos-delay="200">
@@ -86,7 +84,7 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                     </button>
                 </Link>
             </div>
-            <div className=" order-3 col-span-4 lg:order-3 pr-4 pl-[4rem] md:pl-[10rem] lg:pl-4" id="right-column-container" data-aos="fade-up" data-aos-delay="600">
+            <div className="order-3 col-span-4 lg:order-3 pr-4 pl-[4rem] md:pl-[10rem] lg:pl-4" id="right-column-container" data-aos="fade-up" data-aos-delay="600">
                 <h3 className="text-xs sm:text-sm md:text-base uppercase font-bold tracking-widest text-center lg:text-left"
                     id="company-name"
                     style={{
@@ -112,8 +110,9 @@ const WorkTimeLine: React.FC<TimeLineProps> = ({
                         maxHeight: maxHeight,
                         overflow: 'hidden',
                         transition: 'max-height 0.3s ease-in-out',
-                    }}>{description}
-                </p>
+                    }}
+                    dangerouslySetInnerHTML={{ __html: description }}
+                />
                 {description.length > 300 && (
                     <div className="text-center text-highlight mb-[4rem] text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
                         <button onClick={toggleExpandText}>

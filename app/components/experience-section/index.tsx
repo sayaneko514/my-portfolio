@@ -28,7 +28,6 @@ interface EducationHistory {
     programType: string;
     startDate: string;
     endDate: string;
-    description: string;
     hasComplete: boolean;
     url: string;
 }
@@ -167,7 +166,6 @@ const Experience = () => {
                                 location={education.location}
                                 startDate={education.startDate}
                                 endDate={education.hasComplete ? education.endDate : 'Present'}
-                                description={education.description}
                                 url={education.url}
                             />
                         ))}

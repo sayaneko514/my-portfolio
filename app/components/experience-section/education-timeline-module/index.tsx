@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 interface TimeLineProps {
@@ -14,7 +14,6 @@ interface TimeLineProps {
     location: string;
     startDate: string;
     endDate: string;
-    description: string;
     url: string;
 }
 
@@ -25,14 +24,10 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
     location,
     startDate,
     endDate,
-    description,
     url
 
 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const maxHeight = isExpanded ? '1000px' : '160px';
-
-    const toggleExpandText = () => setIsExpanded(!isExpanded);
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
@@ -57,25 +52,8 @@ const EducationTimeLine: React.FC<TimeLineProps> = ({
                             lineHeight: 1.5,
                             letterSpacing: '.2rem'
                         }}>{programType}
-                    </h5></div>
-                <p className="text-xs md:text-sm text-slate-500 text-center pr-4 lg:pr-0 lg:text-right mt-4 1440:mb-[4rem] transition-opacity duration-400"
-                    id="program-description"
-                    style={{
-                        fontFamily: '"Lora", serif',
-                        lineHeight: '1.9rem',
-                        maxHeight: maxHeight,
-                        overflow: 'hidden',
-                        transition: 'max-height 0.3s ease-in-out',
-                    }}>{description}
-                </p>
-                {description.length > 270 && (
-                    <div className="text-center text-highlight mb-[4rem] text-[0.65rem] sm:text-xs md:text-sm lg:text-base 1440:hidden">
-                        <button onClick={toggleExpandText}>
-                            {isExpanded ? "Show Less " : "Show More "}
-                            {isExpanded ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
-                        </button>
-                    </div>
-                )}
+                    </h5>
+                </div>
             </div>
             <div className="absolute inset-y-0 w-full col-start-1 col-end-2 lg:col-start-5 lg:col-end-6" id="time-line" data-aos="fade-up" data-aos-delay="400">
                 <div className="h-full w-px bg-slate-600 mx-auto"></div>
